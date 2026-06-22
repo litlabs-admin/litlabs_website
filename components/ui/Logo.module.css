@@ -1,39 +1,5 @@
 .logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-.logo svg {
-  flex: none;
-}
-
-/* Continuously rolling brand mark */
-.spark {
-  transform-origin: 50% 50%;
-  animation: roll 5s linear infinite;
-}
-.logo:hover .spark {
-  animation-duration: 1.2s;
-}
-@keyframes roll {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .spark {
-    animation: none;
-  }
-}
-.wordmark {
-  font-family: var(--font-tight);
-  font-weight: 600;
-  font-size: 1.18rem;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  color: var(--color-ink-strong);
-  white-space: nowrap;
+  display: block;
+  width: auto;
+  height: auto;
 }

@@ -7,16 +7,8 @@ import styles from "./HeroVisual.module.css";
 function Spark({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="hv-spark" x1="4" y1="2" x2="20" y2="22">
-          <stop stopColor="#A1ADFF" />
-          <stop offset="1" stopColor="#6F84ED" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M12 2c.5 4.2 1.8 5.5 6 6-4.2.5-5.5 1.8-6 6-.5-4.2-1.8-5.5-6-6 4.2-.5 5.5-1.8 6-6Z"
-        fill="url(#hv-spark)"
-      />
+      <rect x="4" y="2" width="6.5" height="20" rx="3.25" fill="var(--color-accent)" />
+      <rect x="13.5" y="2" width="6.5" height="20" rx="3.25" fill="var(--color-accent)" />
     </svg>
   );
 }
