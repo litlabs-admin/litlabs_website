@@ -1,0 +1,157 @@
+.footer {
+  background: var(--color-ink-strong);
+}
+
+.wrapper {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  border: 1px solid var(--gray-333);
+  background: var(--color-ink);
+}
+
+.inner {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  padding: 0 40px;
+  border-bottom: 1px solid var(--gray-333);
+}
+
+.col {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 40px 0;
+  min-width: 0;
+}
+
+.brandCol {
+  gap: 28px;
+}
+
+.logo img {
+  width: 104px;
+  height: 23px;
+  object-fit: contain;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.social {
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  background: var(--gray-333);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.social:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+.social img {
+  width: 24px;
+  height: 24px;
+}
+
+.colTitle {
+  color: var(--color-white);
+}
+
+.colLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.colLink {
+  color: var(--gray-d1);
+  transition: color 0.2s ease;
+}
+.colLink:hover {
+  color: var(--color-white);
+}
+
+.colLinkSmall {
+  color: var(--gray-d1);
+  transition: color 0.2s ease;
+}
+.colLinkSmall:hover {
+  color: var(--color-white);
+}
+
+.divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--gray-333);
+  flex: none;
+}
+
+/* ---- copyright row ---- */
+.copyright {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 24px;
+}
+.copyText {
+  color: var(--gray-ba);
+}
+.poweredBy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.poweredByLabel {
+  color: var(--gray-ba);
+}
+.omakase {
+  width: 114px;
+  height: 16px;
+  flex: none;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 1199.98px) {
+  .inner {
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0 32px;
+  }
+  .brandCol {
+    flex: 1 1 100%;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-333);
+  }
+  .col {
+    flex: 1 1 45%;
+    padding: 32px 0;
+  }
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .inner {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  .col {
+    flex: 1 1 100%;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--gray-333);
+  }
+  .copyright {
+    flex-direction: column;
+    padding: 28px 16px;
+    gap: 16px;
+  }
+}

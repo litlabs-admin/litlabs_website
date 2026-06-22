@@ -1,0 +1,89 @@
+.section {
+  width: 100%;
+  padding: 0 var(--container-pad);
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: var(--container-max);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 32px;
+  padding: 120px 80px;
+  min-height: 520px;
+}
+.bg {
+  object-fit: cover;
+  z-index: 0;
+}
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 900px;
+}
+.quoteIcon {
+  font-family: var(--font-tight);
+  font-size: 80px;
+  line-height: 0.6;
+  color: var(--color-white);
+  height: 40px;
+}
+.quote {
+  color: var(--color-white);
+  text-align: center;
+}
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  overflow: hidden;
+  flex: none;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.name {
+  color: var(--color-white);
+}
+.role {
+  color: var(--gray-d1);
+}
+
+@media (max-width: 1199.98px) {
+  .box {
+    padding: 96px 48px;
+  }
+}
+@media (max-width: 809.98px) {
+  .box {
+    padding: 64px 20px;
+    min-height: 0;
+  }
+}

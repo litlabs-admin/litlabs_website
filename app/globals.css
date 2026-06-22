@@ -1,0 +1,382 @@
+/* ============================================================
+   Machina — Global design system
+   Ported from the Framer export (token values + type presets)
+   ============================================================ */
+
+:root {
+  /* ---- Color tokens (verbatim from Framer) ---- */
+  --color-white: #fff; /* token-2ffd2510 */
+  --color-black: #000; /* token-475e5204 */
+  --color-ink: #1f1f1f; /* token-e0530dcf — primary text */
+  --color-ink-strong: #1a1a1a; /* token-974417ce / 76384563 */
+  --color-accent: #ed4609; /* token-298175ca — orange */
+  --color-accent-2: #e35724; /* token-7c7e0ec3 */
+  --color-error: #f24; /* token-1dd56d91 */
+
+  --gray-333: #333; /* token-143b34f3 */
+  --gray-454: #454545; /* token-296fbda8 */
+  --gray-484: #484848; /* token-d42a83c9 */
+  --gray-767: #767676; /* token-f8610471 */
+  --gray-a3: #a3a3a3; /* token-062cb19c */
+  --gray-ba: #bababa; /* token-c8a49530 */
+  --gray-d1: #d1d1d1; /* token-ed4f0ac9 */
+  --gray-e8: #e8e8e8; /* token-a21ba7dc — standard border */
+  --gray-ec: #ececec; /* token-fd51bd39 — light border */
+  --gray-f2: #f2f2f2; /* token-ec6a8799 */
+  --gray-f5: #f5f5f5; /* token-39ce3813 — surface */
+  --gray-f7: #f7f7f7; /* token-637d2eda */
+  --gray-f8: #f8f8f8; /* token-204c42bf */
+  --gray-fb: #fbfbfb; /* token-ff0bde72 */
+
+  /* ---- Fonts ---- */
+  --font-tight: var(--font-inter-tight), "Inter Tight", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+  --font-mono: var(--font-geist-mono), "Geist Mono", monospace;
+
+  /* ---- Layout ---- */
+  --container-max: 1400px;
+  --container-pad: 40px;
+
+  /* ---- Motion ---- */
+  --ease-framer: cubic-bezier(0.44, 0, 0.56, 1);
+  --reveal-duration: 0.6s;
+
+  /* ---- Arrow glyph used in CTA buttons (from Framer icon mask) ---- */
+  --arrow-mask: url("data:image/svg+xml,<svg viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'><path d='M 6.75 1.5 L 7.5 1.5 L 7.5 3 L 9 3 L 9 4.5 L 0 4.5 L 0 6 L 9 6 L 9 7.5 L 7.5 7.5 L 7.5 9 L 6.75 9 L 6.75 10.5 L 9 10.5 L 9 9 L 10.5 9 L 10.5 7.5 L 12 7.5 L 12 6.75 L 12.75 6.75 L 12.75 6 L 13.5 6 L 13.5 4.5 L 12.75 4.5 L 12.75 3.75 L 12 3.75 L 12 3 L 10.5 3 L 10.5 1.5 L 9 1.5 L 9 0 L 6.75 0 Z' transform='translate(2.25 3.75)' fill='black'/></svg>");
+
+  /* ---- Check/sparkle glyph used in stat lists ---- */
+  --check-mask: url("data:image/svg+xml,<svg viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'><path d='M 13.5 0 L 13.5 1.5 L 12 1.5 L 12 3 L 10.5 3 L 10.5 4.5 L 9 4.5 L 9 6 L 7.5 6 L 7.5 7.5 L 6 7.5 L 6 9 L 5.25 9 L 5.25 9.75 L 3.75 9.75 L 3.75 9 L 3 9 L 3 7.5 L 1.5 7.5 L 1.5 6.75 L 0 6.75 L 0 9 L 1.5 9 L 1.5 10.5 L 3 10.5 L 3 12 L 3.75 12 L 3.75 12.75 L 5.25 12.75 L 5.25 12 L 6 12 L 6 10.5 L 7.5 10.5 L 7.5 9 L 9 9 L 9 7.5 L 10.5 7.5 L 10.5 6 L 12 6 L 12 4.5 L 13.5 4.5 L 13.5 3 L 15 3 L 15 0 Z' transform='translate(1.5 3)' fill='black'/></svg>");
+
+  /* ---- Button elevation (red-tinted, from primary CTA) ---- */
+  --shadow-button: 0px 1px 2px 0px rgba(112, 0, 0, 0.03),
+    0px 3px 3px 0px rgba(112, 0, 0, 0.03), 0px 8px 5px 0px rgba(112, 0, 0, 0.02),
+    0px 13px 5px 0px rgba(112, 0, 0, 0), 0px 21px 6px 0px rgba(112, 0, 0, 0);
+  --shadow-card: 0px 0.6021873017743928px 1.5656869846134214px -1.5px
+      rgba(0, 0, 0, 0.17),
+    0px 2.288533303243457px 5.950186588432988px -3px rgba(0, 0, 0, 0.14),
+    0px 10px 26px -4.5px rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 1199.98px) and (min-width: 810px) {
+  :root {
+    --container-pad: 32px;
+  }
+}
+@media (max-width: 809.98px) {
+  :root {
+    --container-pad: 16px;
+  }
+}
+
+/* ============================================================
+   Reset
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   Layout helpers
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max) + var(--container-pad) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* ============================================================
+   Typography presets (Framer style presets → utility classes)
+   Base = desktop (≥1200). Media queries match Framer breakpoints.
+   ============================================================ */
+
+/* Hero H1 — preset 1ufh66t */
+.t-hero {
+  font-family: var(--font-tight);
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 90%;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+.t-hero b,
+.t-hero strong {
+  font-weight: 600;
+}
+
+/* Section display title — preset 1ovz52d */
+.t-display {
+  font-family: var(--font-tight);
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 120%;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* H2 — preset u5q4md */
+.t-h2 {
+  font-family: var(--font-tight);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* H4 / card heading — preset iptkh8 */
+.t-h4 {
+  font-family: var(--font-tight);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* H5 — preset 16j8gq7 */
+.t-h5 {
+  font-family: var(--font-tight);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* H6 — preset kiuot3 */
+.t-h6 {
+  font-family: var(--font-tight);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* Large body — preset yrc8h4 */
+.t-body-lg {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.4px;
+  color: var(--color-ink);
+}
+
+/* Body — preset 1qauldg */
+.t-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.4px;
+  color: var(--color-ink);
+}
+
+/* Description — preset gvdnp1 */
+.t-desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.2px;
+  color: var(--color-ink);
+}
+
+/* Standard body — preset sb3535 */
+.t-body-sm {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.2px;
+  color: var(--color-ink);
+}
+
+/* Tiny caption — preset 7gdq2g */
+.t-caption {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+  color: var(--color-ink);
+}
+
+/* Eyebrow / mono label — preset 98da42 */
+.t-eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2em;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* Small mono label — preset zognak */
+.t-mono-sm {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2em;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* Mono 18 — preset 1iv1mkj */
+.t-mono-lg {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2em;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* Mono 16 — preset 6wfxrj */
+.t-mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2em;
+  letter-spacing: -0.6px;
+  color: var(--color-ink);
+}
+
+/* ---- Responsive type overrides (match Framer) ---- */
+@media (max-width: 1199.98px) and (min-width: 810px) {
+  .t-hero {
+    font-size: 54px;
+  }
+  .t-display {
+    font-size: 32px;
+  }
+  .t-h2 {
+    font-size: 34px;
+  }
+  .t-h4 {
+    font-size: 24px;
+  }
+  .t-h5 {
+    font-size: 24px;
+  }
+  .t-h6 {
+    font-size: 22px;
+  }
+  .t-body-lg {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .t-hero {
+    font-size: 44px;
+  }
+  .t-display {
+    font-size: 26px;
+  }
+  .t-h2 {
+    font-size: 30px;
+  }
+  .t-h4 {
+    font-size: 24px;
+  }
+  .t-h5 {
+    font-size: 20px;
+  }
+  .t-h6 {
+    font-size: 20px;
+  }
+  .t-body-lg {
+    font-size: 18px;
+  }
+}
+
+/* Utility: visually-hidden */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

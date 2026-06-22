@@ -1,0 +1,132 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--color-white);
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--container-pad);
+  border-left: 1px solid var(--gray-ec);
+  border-right: 1px solid var(--gray-ec);
+  border-bottom: 1px solid var(--gray-ec);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+
+/* ---- desktop links ---- */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.link {
+  position: relative;
+  display: block;
+  height: 18px;
+  overflow: hidden;
+  color: var(--color-black);
+}
+.linkTrack {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.32s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.link:hover .linkTrack {
+  transform: translateY(-18px);
+}
+.linkTrack span {
+  height: 18px;
+  line-height: 18px;
+  display: block;
+  white-space: nowrap;
+}
+
+.desktopOnly {
+  display: flex;
+}
+.mobileBtn {
+  display: none;
+}
+
+/* ---- hamburger ---- */
+.hamburger {
+  width: 28px;
+  height: 18px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex: none;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--color-ink-strong);
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+}
+.hamburger span:nth-child(2) {
+  width: 70%;
+}
+.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.open span:nth-child(2) {
+  opacity: 0;
+}
+.open span:nth-child(3) {
+  width: 100%;
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ---- mobile menu ---- */
+.mobileMenu {
+  overflow: hidden;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--gray-ec);
+  border-left: 1px solid var(--gray-ec);
+  border-right: 1px solid var(--gray-ec);
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+.mobileMenuInner {
+  display: flex;
+  flex-direction: column;
+  padding: 16px var(--container-pad) 28px;
+  gap: 4px;
+}
+.mobileLink {
+  padding: 12px 0;
+  color: var(--color-ink-strong);
+  border-bottom: 1px solid var(--gray-f2);
+}
+.mobileCta {
+  margin-top: 16px;
+}
+
+/* ---- breakpoints ---- */
+@media (max-width: 1199.98px) {
+  .desktopOnly {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .inner {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}

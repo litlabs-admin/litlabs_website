@@ -1,0 +1,190 @@
+.section {
+  width: 100%;
+  padding: 0 var(--container-pad);
+  display: flex;
+  justify-content: center;
+  scroll-margin-top: 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  border: 1px solid var(--gray-ec);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 40px;
+}
+
+/* ---- cards row ---- */
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  height: 500px;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--gray-ec);
+  background: var(--gray-f8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 40px 24px;
+  flex: 1 1 0;
+  cursor: pointer;
+  transition: flex-grow 0.6s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.card.active {
+  flex-grow: 2.4;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.card.active .bg {
+  opacity: 1;
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.6) 65%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+.cardTitle {
+  color: var(--color-ink);
+  white-space: nowrap;
+  transition: color 0.4s ease;
+}
+.cardDesc {
+  color: var(--gray-767);
+  transition: color 0.4s ease, opacity 0.4s ease;
+}
+.card.active .cardTitle {
+  color: var(--color-white);
+}
+.card.active .cardDesc {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.stats {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+.stat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+.statIcon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  background-color: var(--color-accent);
+  -webkit-mask: var(--check-mask) no-repeat center / contain;
+  mask: var(--check-mask) no-repeat center / contain;
+}
+.statText {
+  color: var(--color-ink);
+  transition: color 0.4s ease;
+  white-space: nowrap;
+}
+.card.active .statText {
+  color: var(--color-white);
+}
+
+/* fade the long content out in collapsed cards so it doesn't crowd */
+.card:not(.active) .cardDesc,
+.card:not(.active) .stats {
+  opacity: 0.001;
+  transition: opacity 0.3s ease;
+}
+.card.active .cardDesc,
+.card.active .stats {
+  opacity: 1;
+  transition: opacity 0.5s ease 0.15s;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 1199.98px) {
+  .container {
+    padding: 64px 32px;
+    gap: 40px;
+  }
+  .row {
+    height: 440px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .container {
+    padding: 48px 16px;
+    gap: 32px;
+  }
+  .row {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+  .card {
+    flex: none;
+    height: 360px;
+  }
+  .card .bg {
+    opacity: 1;
+  }
+  .card .cardTitle,
+  .card .statText {
+    color: var(--color-white);
+  }
+  .card .cardDesc {
+    color: rgba(255, 255, 255, 0.82);
+    opacity: 1;
+  }
+  .card .stats {
+    opacity: 1;
+  }
+  .cardTitle,
+  .statText {
+    white-space: normal;
+  }
+}

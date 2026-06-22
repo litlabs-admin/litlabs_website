@@ -1,0 +1,97 @@
+.btn {
+  display: inline-flex;
+  flex-flow: row;
+  place-content: center;
+  align-items: center;
+  gap: 8px;
+  width: min-content;
+  padding: 13px 18px;
+  border-radius: 100px;
+  text-decoration: none;
+  white-space: pre;
+  position: relative;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2em;
+  letter-spacing: -0.6px;
+  border: 0;
+  transition: filter 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.label {
+  position: relative;
+}
+
+/* ---- variants ---- */
+.primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+.primary:hover {
+  filter: brightness(0.94);
+}
+
+.secondary {
+  background-color: var(--color-ink-strong);
+  color: var(--color-white);
+}
+.secondary:hover {
+  filter: brightness(1.25);
+}
+
+.alt {
+  background-color: var(--color-white);
+  color: var(--color-ink-strong);
+  box-shadow: inset 0 0 0 1px var(--gray-e8);
+}
+.alt:hover {
+  background-color: var(--gray-f5);
+}
+
+.ghost {
+  background-color: var(--gray-f5);
+  color: var(--color-ink-strong);
+  box-shadow: inset 0 0 0 1px var(--gray-e8);
+}
+.ghost:hover {
+  background-color: var(--gray-ec);
+}
+
+.fullWidth {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ---- sliding arrow icon (mask) ---- */
+.iconWrap {
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  position: relative;
+  flex: none;
+}
+
+.iconTrack {
+  display: flex;
+  gap: 5px;
+  transform: translateX(-23px);
+  transition: transform 0.35s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.btn:hover .iconTrack {
+  transform: translateX(0);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  background-color: currentColor;
+  -webkit-mask: var(--arrow-mask) no-repeat center / contain;
+  mask: var(--arrow-mask) no-repeat center / contain;
+}
