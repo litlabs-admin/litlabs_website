@@ -85,7 +85,8 @@
 }
 .cardTitle {
   color: var(--color-ink);
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
   transition: color 0.4s ease;
 }
 .cardDesc {
@@ -132,16 +133,26 @@
   color: var(--color-white);
 }
 
-/* fade the long content out in collapsed cards so it doesn't crowd */
+/* collapsed cards: drop the long content out of flow so only the (wrapped)
+   title shows, pinned to the bottom of the card */
 .card:not(.active) .cardDesc,
 .card:not(.active) .stats {
-  opacity: 0.001;
-  transition: opacity 0.3s ease;
+  display: none;
 }
+/* active card: ease the content in as the card opens */
 .card.active .cardDesc,
 .card.active .stats {
-  opacity: 1;
-  transition: opacity 0.5s ease 0.15s;
+  animation: svc-reveal 0.5s ease 0.15s both;
+}
+@keyframes svc-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ---- responsive ---- */
@@ -182,6 +193,13 @@
   }
   .card .stats {
     opacity: 1;
+  }
+  /* on mobile every card is expanded-style, so re-show collapsed content */
+  .card:not(.active) .cardDesc {
+    display: block;
+  }
+  .card:not(.active) .stats {
+    display: flex;
   }
   .cardTitle,
   .statText {
