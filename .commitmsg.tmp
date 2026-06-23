@@ -1,8 +1,0 @@
-Integrate uploaded LITLABS wordmark logo
-
-Process the newly uploaded logo into clean transparent variants: crop the
-wordmark out of its 1280x569 off-white canvas, generate dark-text (navbar) and
-white-text (footer) cutouts. Fix the Logo component aspect ratio (839x108) so it
-no longer distorts, and drop the leftover WhatsApp upload from public/.
-
-Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
