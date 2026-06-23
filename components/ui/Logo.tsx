@@ -6,12 +6,12 @@ import styles from "./Logo.module.css";
  * staggered "LIT LABS." lockup), cut out to transparent. Dark-text variant for
  * light surfaces (navbar), white-text variant for dark surfaces (footer).
  */
-const LOGO_W = 135;
-const LOGO_H = 110;
+const LOGO_W = 839;
+const LOGO_H = 108;
 
 export default function Logo({
   light = false,
-  size = 50,
+  size = 24,
 }: {
   light?: boolean;
   size?: number;
