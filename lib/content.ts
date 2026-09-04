@@ -11,6 +11,7 @@ export const NAV_LINKS = [
   { label: "Solutions", href: "#services" },
   { label: "Process", href: "#our-process" },
   { label: "Results", href: "#case-study" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "#faq" },
 ] as const;
 
@@ -404,10 +405,9 @@ export const FOOTER = {
     {
       title: "Explore",
       links: [
+        { label: "Blog", href: "/blog" },
         { label: "FAQ", href: "#faq" },
-        { label: "Privacy Policy", href: "/legal/privacy-policy" },
-        { label: "Terms of Service", href: "/legal/terms-of-service" },
-        { label: "Data Processing", href: "/legal/data-processing" },
+        { label: "Privacy Policy", href: "/policies" },
       ],
     },
   ],

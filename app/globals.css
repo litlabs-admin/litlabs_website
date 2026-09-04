@@ -85,6 +85,11 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  /* Prevent the browser from "helpfully" preserving scroll position when
+     client-side navigation swaps in a new page with similar DOM structure
+     (e.g. one /blog/[slug] article to another) — it fights the intended
+     scroll-to-top reset, landing the new page mid-scroll instead of at top. */
+  overflow-anchor: none;
 }
 
 body {

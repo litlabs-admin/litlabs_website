@@ -1,0 +1,120 @@
+.h2 {
+  color: var(--color-ink-strong);
+  margin-top: 12px;
+  scroll-margin-top: 96px;
+}
+
+.h3 {
+  color: var(--color-ink-strong);
+  scroll-margin-top: 96px;
+}
+
+.p {
+  color: var(--color-ink);
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-ink);
+}
+
+.listOrdered {
+  list-style-type: decimal;
+}
+
+.list li {
+  line-height: 1.5;
+}
+
+.callout {
+  padding: 28px;
+  border: 1px solid var(--gray-ec);
+  background: var(--gray-fb);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calloutAccent {
+  border-left: 3px solid var(--color-accent);
+}
+
+.calloutTitle {
+  color: var(--color-ink-strong);
+}
+
+.calloutText {
+  color: var(--gray-767);
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.figureImg {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--gray-ec);
+}
+
+.caption {
+  color: var(--gray-767);
+  text-align: center;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 24px;
+  border-left: 2px solid var(--color-accent);
+}
+
+.quoteText {
+  color: var(--color-ink);
+}
+
+.quoteAttr {
+  color: var(--gray-767);
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 28px;
+  border: 1px solid var(--gray-ec);
+  background: var(--gray-fb);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 140px;
+}
+
+.statValue {
+  color: var(--color-accent);
+}
+
+.statLabel {
+  color: var(--gray-767);
+}
+
+@media (max-width: 809.98px) {
+  .callout {
+    padding: 24px;
+  }
+  .stats {
+    padding: 24px;
+    gap: 24px;
+  }
+}
