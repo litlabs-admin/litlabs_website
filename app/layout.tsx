@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     icon: "/litlabs-mark.svg",
     apple: "/litlabs-mark.svg",
   },
+  verification: {
+    google: "EgAm82zYUf8uuFTWZtmwqkOm1YKLqf4s5TlEZh-srPM",
+  },
   openGraph: {
     type: "website",
     title: TITLE,
