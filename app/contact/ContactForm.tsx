@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Button from "@/components/ui/Button";
+import { CAL_LINK } from "@/lib/content";
 import styles from "./contact.module.css";
 
 export default function ContactForm() {
@@ -18,7 +19,7 @@ export default function ContactForm() {
             Our team will reach out within one business day to set up your call.
             Prefer to book instantly?{" "}
             <a
-              href="https://cal.com/vandan-mandloi/30min?user=vandan-mandloi"
+              href={CAL_LINK}
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--color-accent)", textDecoration: "underline" }}

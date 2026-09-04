@@ -3,7 +3,7 @@
 
 // Booking link (LitLabs' Cal.com) — used by every primary "Book a call" CTA.
 export const CAL_LINK =
-  "https://cal.com/vandan-mandloi/30min?user=vandan-mandloi";
+  "https://cal.com/vandan-mandloi-discovery/30min";
 export const CONTACT_HREF = "/contact";
 export const EMAIL = "hello@litlabs.agency";
 
