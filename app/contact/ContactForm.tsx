@@ -13,7 +13,7 @@ export default function ContactForm() {
       <div className={styles.form}>
         <div className={styles.success}>
           <p className="t-body-lg" style={{ marginBottom: 8 }}>
-            Thanks — we&apos;ll be in touch.
+            Thanks, we&apos;ll be in touch.
           </p>
           <p className="t-body-sm" style={{ color: "var(--gray-767)" }}>
             Our team will reach out within one business day to set up your call.

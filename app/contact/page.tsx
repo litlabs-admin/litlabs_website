@@ -7,7 +7,7 @@ import ContactForm from "./ContactForm";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact | Lit Labs — Book a call",
+  title: "Contact | Lit Labs | Book a call",
   description:
     "Book a 30-minute call. We'll map your highest-leverage workflows, show you what we'd build, and the impact you can expect.",
 };
@@ -39,7 +39,7 @@ export default function ContactPage() {
                 <p className={`t-desc ${styles.desc}`}>
                   Book a 30-minute call. We&apos;ll map your highest-leverage
                   workflows, show you what we&apos;d build, and the impact you
-                  can expect—before you commit to anything.
+                  can expect, before you commit to anything.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>

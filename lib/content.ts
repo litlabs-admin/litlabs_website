@@ -1,7 +1,7 @@
 // Central content/data for the LitLabs site.
 // Design/template is the Machina build; content is sourced from litlabs.io.
 
-// Booking link (LitLabs' Cal.com) — used by every primary "Book a call" CTA.
+// Booking link (LitLabs' Cal.com), used by every primary "Book a call" CTA.
 export const CAL_LINK =
   "https://cal.com/vandan-mandloi-discovery/30min";
 export const CONTACT_HREF = "/contact";
@@ -69,7 +69,7 @@ export const INDUSTRIES: Industry[] = [
   {
     name: "AI Sales Representative",
     description:
-      "A virtual sales agent that engages prospects in real time—answering questions, recommending products, handling objections, and booking meetings.",
+      "A virtual sales agent that engages prospects in real time, answering questions, recommending products, handling objections, and booking meetings.",
     stats: [
       "Engages every prospect in real time, 24/7",
       "Answers questions & handles objections",
@@ -139,7 +139,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "The AI sales rep handles first-touch and objections better than half my team. Our calendar fills itself now.",
     author: "Elena Voss",
     authorTitle: "VP of Sales | Vantage",
-    avatar: "/images/mXZ1qU00f9mlCP09rwyqg8Eepw.png",
+    avatar: "/images/MNjRCS5Mik1hOHefzXhvi4WAU.png",
     image: "/images/gt35u1HClutWpYo62HTEy4VMuI.png",
     brandLogo: "/images/clients/daylii.png",
   },
@@ -153,7 +153,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Setup was shockingly fast. Two weeks in, we were generating more qualified pipeline than the entire previous quarter.",
     author: "Priya Nair",
     authorTitle: "Head of Growth | Meridian",
-    avatar: "/images/Vn5hZw09rJXKwdlurXzc3NHXwzA.png",
+    avatar: "/images/mXZ1qU00f9mlCP09rwyqg8Eepw.png",
     image: "/images/E0lHzsrd9eC1tNuDgkcX4q8ghNg.png",
     brandLogo: "/images/clients/roswell.png",
   },
@@ -179,7 +179,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "It feels like we hired a full growth team overnight—without the overhead or the months of ramp time.",
+      "It feels like we hired a full growth team overnight, without the overhead or the months of ramp time.",
     author: "Sofia Marchetti",
     title: "Founder | Lumen",
     avatar: "/images/MNjRCS5Mik1hOHefzXhvi4WAU.png",
@@ -196,14 +196,14 @@ export const TESTIMONIALS = [
       "Support deflection passed 60% in week three. My team finally spends its time on the cases that actually need a human.",
     author: "Nina Patel",
     title: "COO | Brightside",
-    avatar: "/images/zkocU3IoD2SqUHHd0mPfjeP6d4.png",
+    avatar: "/images/mXZ1qU00f9mlCP09rwyqg8Eepw.png",
   },
   {
     quote:
-      "Every inbound lead now gets a reply in seconds. Speed-to-lead used to be our biggest leak—now it's a strength.",
+      "Every inbound lead now gets a reply in seconds. Speed-to-lead used to be our biggest leak. Now it's a strength.",
     author: "Liam Carter",
     title: "Director of Sales | Northpeak",
-    avatar: "/images/mXZ1qU00f9mlCP09rwyqg8Eepw.png",
+    avatar: "/images/zkocU3IoD2SqUHHd0mPfjeP6d4.png",
   },
 ];
 
@@ -211,7 +211,7 @@ export const TESTIMONIALS = [
 export const SINGLE_TESTIMONIAL = {
   bgImage: "/images/6UuyuqNeu7Bn6FikMMOsFdXVths.png",
   quote:
-    "Lit Labs didn't just automate our outreach—they rebuilt how our entire revenue engine runs. It's the best hire we never made.",
+    "Lit Labs didn't just automate our outreach. They rebuilt how our entire revenue engine runs. It's the best hire we never made.",
   author: "Marcus Reed",
   title: "Founder & CEO | Northwind Labs",
   avatar: "/images/people/p12.jpg",
@@ -249,14 +249,14 @@ export const IMPACT = {
 export const PROCESS = {
   eyebrow: "Our Process",
   description:
-    "From first call to fully deployed in weeks. We don't hand you another tool to manage—we embed AI into your existing stack and stay hands-on as it scales.",
+    "From first call to fully deployed in weeks. We don't hand you another tool to manage. We embed AI into your existing stack and stay hands-on as it scales.",
   cta: { label: "Schedule a demo", href: CAL_LINK },
   steps: [
     {
       num: "01",
       title: "Discover",
       description:
-        "We map your workflows and pinpoint the highest-leverage places AI can replace manual work—then show you the projected impact before we build anything.",
+        "We map your workflows and pinpoint the highest-leverage places AI can replace manual work, then show you the projected impact before we build anything.",
       graphicOuter: "/images/ERLH5C4pXwBlwh8VdqUou1JewVo.png",
       graphicInner: "/images/3nVMHN91Irtnnduo08fp2GRuaI.png",
     },
@@ -314,17 +314,17 @@ export const INTEGRATION = {
     {
       title: "Plugs into your stack",
       description:
-        "No rip-and-replace—we embed AI into the tools you already use, with no migrations or disruption.",
+        "No rip-and-replace. We embed AI into the tools you already use, with no migrations or disruption.",
     },
     {
       title: "Real-time insight",
       description:
-        "Decisions backed by live data—no manual exports, no stale information, no delays.",
+        "Decisions backed by live data. No manual exports, no stale information, no delays.",
     },
     {
       title: "Workflow automation",
       description:
-        "Operations that run themselves—agents execute multi-step processes end to end.",
+        "Operations that run themselves. Agents execute multi-step processes end to end.",
     },
   ],
 };
@@ -343,11 +343,11 @@ export const FAQ_GROUPS = [
       },
       {
         q: "How fast can we launch?",
-        a: "Most systems go from first call to fully deployed in a matter of weeks—many clients see qualified pipeline within the first two weeks.",
+        a: "Most systems go from first call to fully deployed in a matter of weeks, and many clients see qualified pipeline within the first two weeks.",
       },
       {
         q: "Who owns the system once it's built?",
-        a: "You do. Everything we build is yours—the workflows, the agents, and the data that runs through them.",
+        a: "You do. Everything we build is yours: the workflows, the agents, and the data that runs through them.",
       },
     ],
   },
@@ -356,7 +356,7 @@ export const FAQ_GROUPS = [
     items: [
       {
         q: "Do you integrate with our existing tools?",
-        a: "Yes. We embed AI into the stack you already use—HubSpot, Notion, Gmail, Zapier, Stripe, Intercom and more—with no rip-and-replace.",
+        a: "Yes. We embed AI into the stack you already use (HubSpot, Notion, Gmail, Zapier, Stripe, Intercom and more) with no rip-and-replace.",
       },
       {
         q: "Is our data secure?",
@@ -380,7 +380,7 @@ export const BEFORE_FOOTER = {
   eyebrow: "book a call",
   title: "Ready to hire your next employee?",
   description:
-    "Book a 30-minute call. We'll map your highest-leverage workflows, show you what we'd build, and the impact you can expect—before you commit to anything.",
+    "Book a 30-minute call. We'll map your highest-leverage workflows, show you what we'd build, and the impact you can expect, before you commit to anything.",
   cta: { label: "Schedule a demo", href: CAL_LINK },
 };
 

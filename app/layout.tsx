@@ -5,7 +5,7 @@ import "./globals.css";
 
 const TITLE = "Lit Labs · AI Systems That Work Like Employees";
 const DESCRIPTION =
-  "Your next top performer isn't another hire. Lit Labs builds AI systems that work across sales, marketing, and operations—helping businesses scale faster, operate smarter, and achieve more with less effort.";
+  "Your next top performer isn't another hire. Lit Labs builds AI systems that work across sales, marketing, and operations, helping businesses scale faster, operate smarter, and achieve more with less effort.";
 const OG_IMAGE = "/images/BHxPov1nsOgtnbiKoambuFmA00.png";
 
 export const metadata: Metadata = {
