@@ -78,14 +78,16 @@ export default function CaseStudy() {
                 </div>
 
                 <div className={styles.cardImage}>
-                  <span className={styles.brandLogo}>
-                    <Image
-                      src={cs.brandLogo}
-                      alt=""
-                      width={120}
-                      height={28}
-                    />
-                  </span>
+                  {cs.brandLogo && (
+                    <span className={styles.brandLogo}>
+                      <Image
+                        src={cs.brandLogo}
+                        alt=""
+                        width={120}
+                        height={28}
+                      />
+                    </span>
+                  )}
                   <div className={styles.imageOverlay} />
                   <Image
                     src={cs.image}

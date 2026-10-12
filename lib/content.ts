@@ -35,7 +35,6 @@ export const HERO = {
 // ---- Client logos ----
 export const CLIENTS_LABEL = "Trusted by teams scaling with AI";
 export const CLIENT_LOGOS = [
-  "/images/clients/feather.png",
   "/images/clients/daylii.png",
   "/images/clients/roswell.png",
   "/images/clients/sutton-studios.png",
@@ -110,7 +109,7 @@ export type CaseStudy = {
   authorTitle: string;
   avatar: string;
   image: string;
-  brandLogo: string;
+  brandLogo?: string;
 };
 
 export const CASE_STUDY_EYEBROW = "Case studies";
@@ -127,7 +126,6 @@ export const CASE_STUDIES: CaseStudy[] = [
     authorTitle: "Founder & CEO | Northwind Labs",
     avatar: "/images/people/p12.jpg",
     image: "/images/DElH23YvC7guPQEoE5EX08t8Qw.png",
-    brandLogo: "/images/clients/feather.png",
   },
   {
     headline: "An AI sales rep that fills the calendar",
